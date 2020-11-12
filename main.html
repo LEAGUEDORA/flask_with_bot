@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Home</title>
+        
+    </head>
+
+<style>
+    .buttons_at_top{
+        color: #FFDE40;
+        font-size: large;
+        border: 20px 20px solid #FFDE40;
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: #242a2a;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .buttons_at_top:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        text-size-adjust: 25%;
+        display: inline;
+        padding-top: 25px;
+    }
+
+    .wwcd{
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        font-size: xx-large;
+        background-color: #242a2a;
+        border: 10ch;  
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #FFDE40;   
+    }
+
+    
+
+    
+    .report{
+        background-color:black ;
+        color:#FFDE40;
+        float: right;
+        width: 250px;
+        height: 40px;
+        cursor: pointer;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: large;
+    }
+    .report:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        padding-right: 25px;
+    }
+    .report:hover span{
+        display: none;
+        content: none;
+    }
+    .report:hover:before{
+        content: "Click here to";
+    }
+     
+    .profile{
+        background-color:black ;
+        color:#FFDE40;
+        float: right;
+        width: 250px;
+        height: 35px;
+        cursor: pointer;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: large;
+    }
+    .profile:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        padding-right: 40px;
+    }
+    .profile:hover:before{
+        content: "Watch";
+    }
+    .mark{
+        /* color: #FFDE40; */
+        background-color: white;
+        font-weight: bolder solid #242a2a;
+        /* font-size: 10cm; */
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+        /* margin-right: 250px; */
+        height: 35px;
+        font-size: 25px;
+    }
+    .break{
+        color: #FFDE40;
+        font-size: xx-large;
+    }
+
+    .bot{
+        color: #FFDE40;
+        font-size: large;
+        border: 20px 20px solid #FFDE40;
+        width: 140px;
+        height: 50px;
+        display: inline;
+        background-color: #242a2a;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        float: right;
+
+    }
+
+    .bot:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        text-size-adjust: 25%;
+        display: inline;
+        transform: scale(1.08);
+    }
+
+
+</style>
+
+    <body style="background-image: url(https://i.pinimg.com/originals/f7/43/c4/f743c45a69f00a4d6254ce42f3803dd1.jpg);background-repeat: no-repeat;  background-size: 100% 105%; " ></body>
+
+<div class="buttons_at_top">
+    
+        <button     class="buttons_at_top" onclick="home()" > Home </button>
+<button type="button"      class="buttons_at_top" onclick="about_us()" > About Us </button>
+   <button type="button"     class="buttons_at_top" onclick="contact_us()" > Contact Us </button>
+</div>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRYaC89ly1fXMYDZh5XYxdIZ8D9i1QzCZnyMw&usqp=CAU" alt="bot" style="float: right; width: 350px; height: 200px; ">
+<br><br><br><br><br><br><br><br><br><br><div class="bot" >
+    <button class="bot" onclick="bot()" > Talk to Carlo </button>
+</div>
+
+
+
+<br><br> <br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="wwcd" > <center> Winner Winner Chicken Dinner</center>  </div>
+
+<br>
+ <button class="profile" onclick="profile()"> Player Profile </button>
+ <br><br>
+ <button class="report"  onclick="report()"> Report Players   </button> 
+
+ <div class="break" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifq;" ><center> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; LATEST NEWS</center></div>
+ <marquee class="mark"> 
+     {% for news in new %}
+     {{news}} 
+     {% endfor %}
+     
+</marquee>
+
+    </body>
+
+    <script>
+        function report(){
+            location.replace("report.html")
+        }
+
+        function home(){
+            location.replace("main.html")
+        }
+        function about_us(){
+            location.replace("about_us.html")
+        }
+        function contact_us(){
+            location.replace("contact_us.html")
+        }
+        function profile(){
+            location.replace('details.html')
+        }
+        function bot(){
+            location.replace('bot')
+        }
+        
+    </script>
+
+
+</html> 

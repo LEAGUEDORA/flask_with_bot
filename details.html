@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title> {{ title }}  </title>
+    </head>
+
+    <style>
+        .details{
+            float: right;
+            vertical-align:50%;
+            color:  #ffde40;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+        .details:hover{
+            color: white;
+            /* background-color: #ffde40; */
+            transition: 0.5s;
+            transform: scale(1.05);
+        }
+        .details:hover::after{
+            color: white;
+            /* background-color: #ffde40; */
+            transition: 0.5s;
+        }
+        .report{
+            width: 100px;
+            height: 50px;
+            float: right;
+            size: 10in;
+            display: inline;
+            background-color: #ffde40;
+            
+        }
+        .report:hover{
+            color:#ffde40;
+            background-color:#25292c;
+            cursor: pointer;
+            transition: 0.5s;
+            transform: scale(1.05);
+        }
+        .report:hover::after{
+            color: white;
+            /* background-color: #ffde40; */
+            transition: 1s;
+        }
+        .Home{
+        color: #FFDE40;
+        size: 10in;
+        /* border: 20px 20px solid #FFDE40; */
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .Home:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        display: inline;
+        padding-right: 10px;
+        transform: scale(1.2);
+    }
+    .id{
+        width: 100px;
+        height: 50px;
+        background-color:#FFDE40;
+        display: inline;
+
+        size: 10in;
+    }
+    .id:hover{
+        background-color: #242a2a;
+        color: #FFDE40;
+        cursor: pointer;
+        
+    }
+  
+   
+    
+    </style>
+
+
+    <body style="background-color: black; background-image: url(https://wallpapercave.com/wp/wp4213143.jpg); background-repeat: no-repeat; background-size: 100% ;  "  >
+        <div class="Home" >   <button class="Home" onclick="home()" >Home</button> </div>
+        <img src= "{{ image }}" alt="ranks" style="float: right; "><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <div class="details">
+    <span class="label pid" style="vertical-align:middle;" > Enter Player ID </span>
+    <input type="text" name="pid" id="pid">
+    
+    <div class="id"> <button class="id" onclick="search(document.getElementById('pid').value)" > Get Details </button> </div><br>
+
+     <table style="float: right; width: 25%; " >
+         <tr>
+             <td> Name: </td>
+             <td> {{name[0]}} &emsp; </td>
+         </tr>
+         
+         <tr>
+             <td>ID:</td></div>
+             <td>{{name[1]}}&emsp; &emsp;&emsp; </td>
+         </tr>
+         
+         <tr>
+            <td>Ratio: </td>
+            <td>{{name[2]}}&emsp; &emsp;&emsp;</td>
+        </tr>
+        <!-- <td>&emsp; &emsp;&emsp;</td> -->
+        <tr>
+            <td>Tier: </td>
+            <td>{{name[3]}}&emsp; &emsp;&emsp;</td>
+        </tr>
+        <!-- <td>&emsp; &emsp;&emsp;</td> -->
+        <tr>
+            <td>Server:</td>
+            <td>{{name[4]}}&emsp; &emsp;&emsp;</td>
+        </tr>
+        <!-- <td>&emsp; &emsp;&emsp;</td> -->
+        <tr>
+            <td>Win:</td>
+            <td>{{name[5]}}&emsp; &emsp;&emsp;</td>
+        </tr>
+        <!-- <td>&emsp; &emsp;&emsp;</td> -->
+        <tr>
+            <td>Top 10:</td>
+            <td>{{name[6]}}&emsp; &emsp;&emsp;</td>
+        </tr>
+        
+     </table></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     &emsp; &emsp;&emsp;
+<div class="report"> <button class="report" onclick="report()"> Report Player   </button> </div> 
+    </body>
+    <script>
+
+        function report(){
+            var loc = window.location.href;
+            var loc = loc.split("/");
+            var uuu = loc[loc.length - 1]
+            if (uuu !== "details.html"){
+            location.replace("/report.html/"+uuu)
+            }
+            else{
+                location.replace('/report.html')
+            }
+        }
+        function home(){
+
+location.replace("main.html")
+}
+        function search(id){
+            if (id !== ""){
+            location.replace('/details.html/'+id)
+            }
+            else{
+                alert("Enter ID of player")
+            }
+        }
+
+    </script>
+</html>

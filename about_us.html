@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title> About Us </title> 
+</head>
+
+<style>
+    image{
+        opacity: 1;
+    }
+</style>
+
+
+<script>
+    function home(){
+        location.replace("main.html")
+    }
+</script>
+
+<style>
+    .Home{
+        color: #FFDE40;
+        size: 10in;
+        border: 20px 20px solid #FFDE40;
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: #242a2a;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .Home:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        display: inline;
+        padding-right: 25px;
+        transform: scale(1.2);
+    }
+    
+
+
+
+</style>
+
+
+
+
+<body style="background-color : white; background-image: url(data:image/png;base64,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);  opacity: 1 ;  background-repeat: no-repeat; background-size: 100% 120%;  ">
+    <div class="Home" >   <button class="Home" onclick="home()" >Home</button> </div>
+         <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: #FFDE40; font-size:x-large; text-align: center; font-size: xx-large; "><b>PlayerUnknown's Battlegrounds</b></p><p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; color: white; font-size:large; line-height: 200%;  "><b>PUBG</b> is an online multiplayer battle royale game developed and published by PUBG Corporation, a subsidiary of South Korean video game company Bluehole.
+The game is based on previous mods that were created by Brendan Greene  for other games, inspired by the 2000 Japanese film Battle Royale and expanded into a standalone game under Greene's creative direction. In the game, up to one hundred players parachute onto an island and scavenge for weapons and equipment to kill others while avoiding getting killed themselves. The available safe area of the game's map decreases in size over time, directing surviving players into tighter areas to force encounters. The last player or team standing wins the round.<br>
+
+<Br>Battlegrounds was first released for  Microsoft Windows via Steam's early access beta program in March 2017, with a full release in December 2017. The game was also released by Microsoft Studios for the Xbox One via its Xbox Game Preview program that same month, and officially released in September 2018. A free-to-play mobile game version for Android and iOS was released in 2018, in addition to a port for the PlayStation 4. A version for the Stadia streaming platform was released in April 2020. Battlegrounds is one of the best-selling and most-played video games of all time. The game has sold over 70 million copies on personal computers and game consoles as of 2020, in addition to PUBG Mobile accumulating 734 million downloads and grossing over  $3.5 billion on mobile devices.<br>
+
+<Br >Battlegrounds received positive reviews from critics, who found that while the game had some technical flaws, it presented new types of gameplay that could be easily approached by players of any skill level and was highly replayable. The game was attributed to popularizing the battle royale genre, with a number of unofficial Chinese clones also being produced following its success. The game also received several Game of the Year nominations, among other accolades. PUBG Corporation has run several small tournaments and introduced in-game tools to help with broadcasting the game to spectators, as they wish for it to become a popular esport. The game has also been  banned in some countries for allegedly being harmful and addictive to younger players.</p>
+
+
+    <p style="color: white; text-align: center; font-size:xx-large; color:#FFDE40; background-color: white; font-family: myFirstFont; ">  Winner Winner Chicken Dinner   </p>
+    
+</body>
+
+
+
+
+</html>

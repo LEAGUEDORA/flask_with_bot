@@ -1,0 +1,121 @@
+<!-- This page is designed to report a player in PUBG MOBILE -->
+
+<!DOCTYPE Html>
+
+<html>
+    <head>
+        <title>
+            Report Page
+        </title>
+    </head>
+
+
+<style>
+    @font-face {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        src: url("HeadlinerNo.45DEMO.ttf");
+    }
+    .wwcd{
+        text-align: center;
+        color: white;
+
+    }
+    .label{
+        color: #FFDE40;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: large;
+    }
+    input{
+        width: 25%;
+        padding: 10px 4px;
+        border: 2px solid #8a552b;
+
+    }
+    .Home{
+        color: #FFDE40;
+        font-size: large;
+        /* border: 20px 20px solid #FFDE40; */
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .Home:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        display: inline;
+        padding-right: 10px;
+        transform: scale(1.2);
+    }
+    .submit{
+        color: #FFDE40;
+        size: 15in;
+        font-size: large    ;
+        /* border: 20px 20px solid #FFDE40; */
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .submit:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        display: inline;
+        padding-right: 10px;
+        transform: scale(1.2);
+    }
+    
+
+    
+  
+
+</style>
+
+
+<script>
+    function home(){
+
+        location.replace("/main.html")
+    }
+
+    function submit(pid, oid, cheat){
+
+        alert( "Hello   "+ pid + "\n" + "Your Report on " + oid + " and claimed that he is using " +cheat + " has been filed and we \n are on work to investigate it.")
+    }
+</script>
+
+
+    <body style="background-image: url(https://4.bp.blogspot.com/-duVwFkbmmfI/XH6E1esd0AI/AAAAAAAAAXw/KwBgaX2BCAUFmTsdUvSwTj3RlJaDiEGOQCKgBGAs/w3440-h1440-p-k-no-nu/pubg-lone-survivor-rank-logo-playerunknowns-battlegrounds-uhdpaper.com-4K-89.jpg); background-size: cover; background-repeat: no-repeat; background-color: black; " >
+        <div class="Home" >   <button class="Home" onclick="home()" >Home</button> </div>
+<br><br><br><br><br><br><br><br><br><br><br>
+ 
+<p style="color: #FFDE40; font-family: myFirstFont; font-size: xx-large; " > &emsp;&emsp;&emsp; &nbsp; &nbsp; Please report Here</p>
+<span class="label pid"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &nbsp; &emsp;   Player Id  </span><br>
+<input type="text" name="pid" id="pid" ><br><br>
+
+<span class="label pid">  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &nbsp; &emsp;  Opponent Id  </span><br>
+<input type="text" name="oid" id="oid" value="{{ id }}" ><br><br>
+
+
+<span class="label pid"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &nbsp; &emsp;  Cheat Used  </span><br>
+<input type="text" name="cheat" id="cheat"><br>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &nbsp; &emsp; <div class="submit" >   <button class="submit" onclick="submit(document.getElementById('pid').value, document.getElementById('oid').value, document.getElementById('cheat').value)" >  submit</button> </div>
+<br><br><br><br><br><br><br><br><br>        
+    </body>
+
+
+
+
+</html>

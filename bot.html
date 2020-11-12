@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<style>
+    .buttons_at_top{
+        color: #FFDE40;
+        font-size: large;
+        border: 20px 20px solid #FFDE40;
+        width: 100px;
+        height: 50px;
+        display: inline;
+        background-color: #242a2a;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor: pointer;
+        
+    }
+
+    .buttons_at_top:hover{
+        background-color: #FFDE40;
+        color: #242a2a;
+        transition: 0.5s;
+        text-size-adjust: 25%;
+        display: inline;
+        padding-top: 25px;
+    }
+
+</style>
+
+<div class="buttons_at_top">
+    
+    <button     class="buttons_at_top" onclick="home()" > Home </button>
+</div>
+
+<br><br><br><br>
+<body style="background-image: url(https://i.pinimg.com/originals/78/b0/e8/78b0e8dc9b07dbc455aac05689b7b22d.jpg); background-size: 100%;" >
+<h1 style="color: white; text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: #FFDE40;  ">&emsp;&emsp;Welcome</h1>
+<div>
+<div id = "chatbox">
+<p class = "botText" style="text-align: center; color: white; font-size: large; color: #FFDE40;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><span> &emsp;&emsp;&emsp; Hi! Iam Sara.</span></p>
+<p class = "botText" style="text-align: center; color: white; font-size: large; color: #FFDE40; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; "><span>&emsp;&emsp;&emsp;I can help you to report a player</span></p>
+<p class = "botText" style="text-align: center; color: white; font-size: large; color: #FFDE40;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><span>&emsp;&emsp;&emsp;Help watch your stats</span></p>
+<p class = "botText" style="text-align: center; color: white; font-size: large; color: #FFDE40; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; "><span>&emsp;&emsp;&emsp;Learn About Us</span></p>
+<p class = "botText" style="text-align: center; color: white; font-size: large; color: #FFDE40;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; "><span>&emsp;&emsp;&emsp;Contact Us</span></p>
+</div>
+<div id = "userInput" style="margin-top: 0%;" >
+<center>&emsp;&emsp;&emsp;<input id ="textInput" type ="text" name="msg" placeholder="Message" style="border-radius: 5cm; text-align: center;width: 250px; height: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; " ></center> <br>
+<center>&emsp;&emsp;&emsp;<input id = "buttonInput" type = "submit" value="Send" style="width: 100px; height: 25px; background-color:#030303; color: #FFDE40; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; "></center>
+</div>
+<script>
+function getBotResponse(){
+var rawText = $("#textInput").val();
+if (rawText !== ''){
+var userHtml = '<p class = "userText" style = "color: white; text-align:center" ><span>' + "&emsp;&emsp;&emsp;You: " + rawText + '</span></p>';
+$("#textInput").val("");
+$("#chatbox").append(userHtml);
+document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});
+$.get("/get", {msg:rawText }).done(function(data) {
+var botHtml = '<p class ="botText" style="color:white; text-align:center"  ><span>' +"&emsp;&emsp;&emsp;Bot: "  +data + '</span></p>';
+$("#chatbox").append(botHtml);
+document.getElementById('userInput').scrollIntoView({block : 'start',behaviour:'smooth'});
+});
+}
+else{
+    alert("Enter a valid message")
+}
+}
+$("#textInput").keypress(function(e) {
+if(e.which == 13) {
+getBotResponse();
+}
+});
+$("#buttonInput").click(function() {
+getBotResponse();
+})
+
+
+function home(){
+            location.replace("main.html")
+        }
+</script>
+</div>
+</body>
+</html>
