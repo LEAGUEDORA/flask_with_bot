@@ -30,3 +30,14 @@ This bot can help in different ways:
 
 
 Disclaimer: Since heroku is not supporting "spacy" external shortcut links, we have restored the previous version. *Please take this as our respectful concern.* We tried even building dependencies and wheels on our own. Even then we couldn't make it. On our personal Systems the code is running perfectly fine. We are posting two YouTube links one with Chatterbot and the other with Local Host. :)
+
+
+Link for YouTube video in Heroku (without chatterbot) :
+https://www.youtube.com/watch?v=csQ7U9DlI_0
+
+
+Link for the YouTube video with AI (Local Host):
+https://www.youtube.com/watch?v=aJq0sDXFvTo
+
+
+Heroku website link: pubgreportpage.herokuapp.com/
